@@ -1,0 +1,143 @@
+:root {
+    --primary-bg: #fab2b2;
+    --cash-input: #c59e9e;
+    --border-val: #636161 solid 2px;
+    --handle-clr: rgb(8, 8, 8);
+    --price-display: rgb(0, 0, 0);
+    --price-display-clr: rgb(255, 255, 255);
+    --change-drawer: rgb(216, 212, 213);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    height: 100vh;
+    margin: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 10px;
+}
+.cash-input, #cash-register, #drawer {
+    background-color: var(--cash-input);
+    border: var(--border-val);
+}
+.cash-input {    
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+
+}
+#cash-register {
+    width: 400px;
+    height: 400px;
+    background-color: var(--cash-input);
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    "item1 item2"
+    "item3 item2"
+    ".     item2";   
+ 
+}
+#price-display{
+    grid-area: item1;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: var(--price-display);
+    color: var(--price-display-clr)
+}
+#bttns-container {
+    grid-area: item3;
+    display: flex;
+    justify-content: center;
+}
+#bttns {
+    grid-area: item3; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+
+}
+.c-bttns {
+    width: 30px;
+    height: 30px;
+    
+}
+#change-drawer {
+    grid-area: item2;
+    text-align: center;
+    width: 200px;
+    height: 80%;
+    background-color: var(--change-drawer);
+    align-self: center;
+}
+#drawer { 
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#handle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--handle-clr);
+}
+
+h1 {
+    text-align: center;    
+}
+h2 {
+    font-size: 1.1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#purchase-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#purchase-btn:hover {
+    background-color: #218838;
+}
+
+.change-due {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
