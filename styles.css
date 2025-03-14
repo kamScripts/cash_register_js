@@ -5,7 +5,10 @@
     --handle-clr: rgb(8, 8, 8);
     --price-display: rgb(0, 0, 0);
     --price-display-clr: rgb(255, 255, 255);
-    --change-drawer: rgb(216, 212, 213);
+    --change-drawer: rgb(255, 250, 251);
+    --focus-outline: rgb(245, 229, 9);
+    --purchase-btn: #1DA1F2;
+    --prchse-btn-hover: #0056b3;
 }
 
 body {
@@ -13,6 +16,7 @@ body {
     background-color: var(--primary-bg);
     height: 100vh;
     margin: 0;
+    font-size: 18px;
 }
 main {
     display: flex;
@@ -51,7 +55,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;   
-    margin: 10px;
+    margin: 40px auto;
     height: 50px;
     width: 100px;
     background-color: var(--price-display);
@@ -115,24 +119,24 @@ input {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: var(--border-val);
     border-radius: 5px;
     font-size: 1em;
 }
 
 #purchase-btn {
-    background-color: #28a745;
+    background-color: var(--purchase-btn);
+    border: 2px solid #1190df;
     color: #fff;
-    border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #purchase-btn:hover {
-    background-color: #218838;
+    background-color: var(--prchse-btn-hover);
 }
 
 .change-due {
@@ -140,4 +144,8 @@ input {
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
+}
+button:focus,
+input:focus {
+    outline: 2px solid var(--focus-outline);
 }
