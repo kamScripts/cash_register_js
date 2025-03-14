@@ -6,7 +6,7 @@
     --price-display: rgb(0, 0, 0);
     --price-display-clr: rgb(255, 255, 255);
     --change-drawer: rgb(255, 250, 251);
-    --focus-outline: rgb(245, 229, 9);
+    --focus-outline: rgb(201, 235, 9);
     --purchase-btn: #1DA1F2;
     --prchse-btn-hover: #0056b3;
 }
@@ -145,7 +145,7 @@ input {
     font-weight: bold;
     color: #333;
 }
-button:focus,
+#purchase-btn:focus,
 input:focus {
-    outline: 2px solid var(--focus-outline);
+    outline: 4px solid var(--focus-outline);
 }
