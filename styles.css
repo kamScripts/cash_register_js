@@ -1,6 +1,6 @@
 :root {
-    --primary-bg: #fab2b2;
-    --cash-input: #c59e9e;
+    --primary-bg: rgb(248, 217, 217);
+    --cash-input: rgb(221, 197, 197);
     --border-val: #636161 solid 2px;
     --handle-clr: rgb(8, 8, 8);
     --price-display: rgb(0, 0, 0);
@@ -23,20 +23,24 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 10px;
     gap: 10px;
 }
 .cash-input, #cash-register, #drawer {
     background-color: var(--cash-input);
     border: var(--border-val);
 }
-.cash-input {    
-    padding: 20px;
+.cash-input { 
+    display: flex;   
+    padding: 10px;
     border-radius: 10px 10px 0 0;
     width: 300px;
-    height: 200px;
+    height: 250px;
     text-align: center;
 
+}
+.user-input {
+    width: 150px;
 }
 #cash-register {
     width: 400px;
@@ -108,6 +112,12 @@ h1 {
 h2 {
     font-size: 1.1rem;
 }
+p {
+    padding-left: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 0.8rem;
+}
 
 label {
     display: block;
@@ -140,10 +150,9 @@ input {
 }
 
 .change-due {
-    margin-top: 20px;
-    font-size: 1.2em;
+    width: 150px;    
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #333;
 }
 #purchase-btn:focus,
 input:focus {
