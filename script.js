@@ -46,8 +46,7 @@ const handleChange = (inDrawer) => {
     alert("Customer does not have enough money to purchase the item");
   } else if (transaction === 0) {
     changeDue.textContent = "No change due - customer paid with exact cash";
-  } else {
-    changeDue.textContent = "";
+  } else {    
     calculateChange(transaction, inDrawer);
     cashInDrawer.innerHTML = "";
     displayArray(cid, cashInDrawer);
@@ -114,7 +113,6 @@ priceDisplay.textContent = price.toFixed(2);
 displayArray(cid, cashInDrawer);
 
 purchaseBtn.addEventListener("click", (e)=>{
-  changeDue.textContent ='';
-  
+  changeDue.textContent ='';  
   handleChange(cid)});
   
