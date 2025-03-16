@@ -31,12 +31,13 @@ main {
     border: var(--border-val);
 }
 .cash-input { 
-    display: flex; 
+    display: flex;
+    justify-content: space-between; 
     
     border-radius: 10px 10px 0 0;
     width: 400px;
     height: 250px;
-    text-align: center;
+    
 
 }
 .user-input {
@@ -89,6 +90,7 @@ main {
     text-align: center;
     width: 200px;
     height: 80%;
+    padding: 10px;
     background-color: var(--change-drawer);
     align-self: center;
 }
@@ -114,7 +116,7 @@ h2 {
     font-size: 1.1rem;
 }
 p {
-    padding-left: 10px;
+ 
     letter-spacing: 1px;
     text-align: left;
     font-size: 0.8rem;
@@ -152,10 +154,12 @@ input {
     background-color: var(--prchse-btn-hover);
 }
 
-.change-due {
-    
+.change-due { 
+    width: 150px;   
+    padding-top: 10px;
     font-size: 0.9rem;
     font-weight: bold;
+
 }
 #purchase-btn:focus,
 input:focus {
